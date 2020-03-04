@@ -1,0 +1,18 @@
+#My makefile
+TARGETS = program 
+OBJS = main.o helper.o
+HDRS = helper.h 
+CFLAGS = -g 
+CC = gcc 
+
+program: $(OBJS)
+	$(CC) $(CFLAGS) $(OBJS) -o program
+main.o: main.c helper.h
+	$(CC) $(CFLAGS) -c $< -o $@
+helper.o: helper.c helper.h
+	gcc -g -c helper.c -o helper.o
+	
+.PHONY: clean 
+clean:  
+	rm -f $(TARGETS) $(OBJS) 
+	
