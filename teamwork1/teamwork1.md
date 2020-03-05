@@ -1,6 +1,8 @@
 # Teamwork1
 
-######  uPuZu 丁帅 李亚男 徐磊(按姓氏首字母排序)
+**uPuZu 丁帅 李亚男 徐磊(按姓氏首字母排序)**
+
+[TOC]
 
 ## 实验目的
 
@@ -8,19 +10,19 @@
 
 ## 实验内容
 
-1. 安装Linux环境
-2. 编写C文件
-3. 编写Makefile
-4. 通过autotools生成Makefile
-5. 使用git提交作业
+1. [安装Linux环境](#安装Linux环境)
+2. [编写C文件](#编写C文件)
+3. [编写Makefile](#编写Makefile)
+4. [通过autotools生成Makefile](#通过autotools生成Makefile)
+5. [使用git提交作业](#使用git提交作业)
 
 ## 实验内容与结果
 
-- ### 安装Linux环境
+- ### <a name="安装Linux环境" >安装Linux环境</a>
 
   - 没写
 
-- ### 编写C源文件
+- ### <a name="编写C源文件" >编写C源文件</a>
 
   - main.c
 
@@ -74,7 +76,7 @@
 
     ![图片引用错误](./pic/3.png)
 
-- ### 编写Makefile
+- ### <a name="编写Makefile" >编写Makefile</a>
 
   - Makefile
 
@@ -111,7 +113,7 @@
 
     
 
-- ### 通过autotools生成Makefile
+- ### <a name="通过autotools生成Makefile" >通过autotools生成Makefile</a>
 
   - autoscan及configure.ac重命名
 
@@ -179,7 +181,7 @@
     >
     > ![](./pic/18.png)
 
-- ### 使用git提交作业
+- ### <a name="使用git提交作业" >使用git提交作业</a>
 
   - 没写
 
