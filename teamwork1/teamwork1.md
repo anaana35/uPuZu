@@ -199,9 +199,17 @@
 
   ![下载作业到本地](./pic/24.png)
 
-  3、使用git push提交作业
+  3、补充修改完成后，使用如下命令
 
-  
+  git add  . :                              将文件夹下文件添加进来
+
+  git commit -m "3.8" ：        提交信息
+
+  git push -u origin master    输入账号密码后将更新后的作业上传至github中。
+
+  ![作业上传](./pic/25.png)
+
+  ![上传作业](./pic/26.png)
 
 ## 实验总结
 
