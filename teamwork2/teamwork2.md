@@ -525,19 +525,19 @@ void main()
 ```
 ### 结果
 启动server
-<img src="./pic/issue2/启动server.png">
+<img src="./pic/issue1/启动server.png">
 启动client1
-<img src="./pic/issue2/启动client1.png">
+<img src="./pic/issue1/启动client1.png">
 启动client2
-<img src="./pic/issue2/启动client2.png">
+<img src="./pic/issue1/启动client2.png">
 server发出消息
-<img src="./pic/issue2/server发出消息.png">
+<img src="./pic/issue1/server发出消息.png">
 client2收到消息
-<img src="./pic/issue2/client2收到消息.png">
+<img src="./pic/issue1/client2收到消息.png">
 client2发出消息
-<img src="./pic/issue2/client2发出消息.png">
+<img src="./pic/issue1/client2发出消息.png">
 server收到消息
-<img src="./pic/issue2/server收到消息.png">
+<img src="./pic/issue1/server收到消息.png">
 
 ### 问题分析
 ​	mkfifo后写操作失败，在删掉原有的文件之后，可正常运行
