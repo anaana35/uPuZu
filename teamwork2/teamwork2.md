@@ -84,7 +84,7 @@
 
 ## 2. signal实验
 
-```c
+``''`c
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
