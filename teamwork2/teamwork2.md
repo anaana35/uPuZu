@@ -103,15 +103,15 @@ int main()
     for (i = 0; i < 3; i++) {
         pid = fork();
         if (pid == 0) {
-			signal(SIGALRM, handler); /* install SIGALRM handler */
-			alarm(1); /* Next SIGALRM will be delivered in 1s */
+	    	signal(SIGALRM, handler); /* install SIGALRM handler */
+	    	alarm(1); /* Next SIGALRM will be delivered in 1s */
             printf("Hello from child %d\n", (int)getpid());
             pause();
         }
     }
 
   	while(1){
-		char c;
+	char c;
 		if((c=getchar())=='q')
 			break;
 	}
@@ -128,7 +128,7 @@ void handler2(int sig)
     pid_t pid;
   
     while ((pid = waitpid(-1, NULL, 0)) > 0)
-		printf("Handler reaped child %d\n", (int)pid);
+	printf("Handler reaped child %d\n", (int)pid);
     sleep(1);
     return;
 }
