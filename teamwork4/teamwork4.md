@@ -26,10 +26,10 @@ Host-Target 连接
 
 使用vnc实现树莓派连接
 
-> ![./pic/vnc.png](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork4\pic\vnc.png)
+> ![./pic/vnc.png](./pic/vnc.png)
 
 qemu连接树莓派
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork4\pic\qemu.png)
+![](./pic/qemu.png)
 
 ### 2、构建并测试开发板交叉编译器 
 
@@ -58,7 +58,7 @@ scp main pi@192.168.43.241:/home/pi/teamwork/teamwork4
 
 查看传输过来的文件并运行
 
-<img src="D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork4\pic\result1.png" alt="4" style="zoom:38%;" />
+<img src="./pic/result1.png" alt="4" style="zoom:38%;" />
 
 ### 3、建立gdb-gdbserver交叉调试环境
 
@@ -77,7 +77,7 @@ cd gdb-8.2
 ./configure --target=arm-linux --prefix=/usr/local/arm-gdb -v 
 ```
 
-![6](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork4\pic\compile.png)
+![6](./pic/compile.png)
 
 编译(请准备好多杯咖啡，每个命令等待时间都很长)
 
@@ -96,7 +96,7 @@ sudo cp arm-linux-gdb /usr/bin/
 或
 export PATH=$PATH:/usr/local/arm-gdb/bin
 ```
-> ![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork4\pic\arm_gdb.png)
+> ![](./pic/arm_gdb.png)
 
 进入/pi/gdb-8.2/gdb/gdbserver 文件夹，编译gdbserver，命令中的CC变量指定的是gcc编译器： 
 
@@ -138,11 +138,11 @@ gdb-multiarch
 
 host端：
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork4\pic\host.png)
+![](./pic/host.png)
 
 target端：
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork4\pic\target.png)
+![]./pic/target.png)
 
 可以看到这个交叉调试是有效的。 
 
