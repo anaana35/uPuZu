@@ -127,8 +127,6 @@ scp main_g pi@192.168.43.241:/home/pi/teamwork/teamwork4
 
 其中1234是指定的端口
 
-![11](11.jpg)
-
 在host端安装gdb-multiarch，因为arm-linux-gnueabihf没有gdb
 
 ```
@@ -142,7 +140,7 @@ host端：
 
 target端：
 
-![]./pic/target.png)
+![](./pic/target.png)
 
 可以看到这个交叉调试是有效的。 
 
