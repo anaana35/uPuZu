@@ -43,7 +43,7 @@
 
 编译新版本内核，以替换当前内核
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\原始版本号.png)
+![](./pic/原始版本号.png)
 
 安装git和相关依赖
 
@@ -70,7 +70,7 @@ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- zImage modules dtbs
 
 装入sd卡，输入lsblk，获得分区目录
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\sd卡.png)
+![](./pic/sd卡.png)
 
 其中sdb是SD卡，sda是给ubuntu的分区
 
@@ -109,7 +109,7 @@ kernel=kernel-myconfig.img
 
 把SD卡插到树莓派然后重启，uname -a查看下版本
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\新版本.png)
+![](./pic/新版本.png)
 
 ## 2. 内核配置
 
@@ -141,12 +141,12 @@ make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
   M－-将该功能编译成可以在需要时动态插入到内核中的模块  
 这里使用的是 `make  menuconfig`，所以需要使用空格键进行选取。其中有不少选项是目标板开发人员加的，对于陌生选项，保持默认值。
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\配置初始界面.png)
+![](./pic/配置初始界面.png)
 
 在每一个选项前都有一个括号， 有的是中括号有的是尖括号，还有圆括号。用空格键选择时可以发现，中括号里要么是空，要么是“\*”， 尖括号里可以为空，"\*"和"M"这表示前者对应的项要么不要，要么编译到内核里；后者
 则多一样选择，可以编译成模块。而圆括号的内容是要你在所提供的几个选项中选择一项。
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\文件系统配置.png)
+![](./pic/文件系统配置.png)
 
 精简信息如下：
 
@@ -189,7 +189,7 @@ Device Drivers  --->  X86 Platform Specific Device Drivers
 lsmod
 ```
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\lsmod.png)
+![](./pic/lsmod.png)
 
 卸载模块，可以看到，i2c卸载成功
 
@@ -197,7 +197,7 @@ lsmod
 sudo rmmod i2c_dev 
 ```
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\卸载.png)
+![](./pic/卸载.png)
 
 加载模块，其他模块也可以用类似的路径来查看
 
@@ -205,7 +205,7 @@ sudo rmmod i2c_dev
  sudo insmod /lib/modules/<内核版本>/kernel/drivers/i2c/i2c_dev.ko
 ```
 
-<img src="D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\重加载.png" style="zoom:38%;" />
+<img src="./pic/重加载.png" style="zoom:38%;" />
 
 ## 4. 文件系统（NAS文件系统）
 
@@ -215,7 +215,7 @@ sudo rmmod i2c_dev
 sudo fdisk -l
 ```
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\初始文件系统.png)
+![](./pic/初始文件系统.png)
 
 首先，删除磁盘分区表，创建一个新的并且只包含一个分区的新分区表。在 `fdisk` 中，你可以使用交互单字母命令来告诉程序你想要执行的操作。只需要在提示符 `Command(m for help):` 后输入相应的字母即可（可以使用 `m` 命令获得更多详细信息）：
 
@@ -344,7 +344,7 @@ sudo mount -L data /nas/data
 sudo touch test.txt 
 ```
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\树莓派nas文件.png)
+![](./pic/树莓派nas文件.png)
 
 现在你已经设置了基本的网络存储，我们希望将它安装到远程 Linux 机器上。这里使用 NFS 文件系统，首先在树莓派上安装 NFS 服务器：
 
@@ -367,7 +367,7 @@ sudo mount -t nfs 190.121.43.241:/nas/data /nas/data
 
 结果如图：
 
-![](D:\project\嵌入式软件开发技术与工具\Teamwork\teamwork5\pic\远程nas.png)
+![](./pic/远程nas.png)
 
 ## 总结
 
