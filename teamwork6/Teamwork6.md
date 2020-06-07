@@ -152,7 +152,7 @@ TCP中客户端与服务端的连接过程如下：
 ```python
 import time
 from socket import *
-serverName = '127.0.0.1'
+serverName = '192.168.43.241'
 serverPort = 6789
 while(True):
     try:
@@ -186,7 +186,7 @@ import json
 import time
 serverSocket = socket(AF_INET, SOCK_STREAM)
 # Prepare a sever socket
-serverSocket.bind(('localhost', 6789))  # 将TCP欢迎套接字绑定到指定端口
+serverSocket.bind(('192.168.43.241', 6789))  # 将TCP欢迎套接字绑定到指定端口
 serverSocket.listen(1)  # 最大连接数为1
 return_data = {'data': '', 'temperature': '0.0', 'humidity': '0.0'}
 while True:
@@ -198,7 +198,7 @@ while True:
         print(message)
         raw_data = ""
         if message == 'temperature':
-            f = open('./cache.txt')
+            f = open('/mnt/scullfs/env.txt')
             raw_data = f.readline()
             f.close()
             local_time = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
