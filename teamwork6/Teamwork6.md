@@ -41,7 +41,8 @@ endif 
 
 Ubuntu下测试：
 
-![图片](https://uploader.shimo.im/f/ZPsM1wVAWsl4b6Vu.png!thumbnail)![图片](https://uploader.shimo.im/f/0bDVKva8WIx8mSAL.png!thumbnail)
+![图片](https://uploader.shimo.im/f/ZPsM1wVAWsl4b6Vu.png!thumbnail)
+![图片](https://uploader.shimo.im/f/0bDVKva8WIx8mSAL.png!thumbnail)
 
 树莓派下测试：
 
